@@ -1,0 +1,20 @@
+/**
+ * NOTE: this file is symlink to '@zthxxx/tsconfig/build.types.json'
+ */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "es",
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "sourceMap": true,
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "**/*.mock.ts",
+    "**/tests",
+    "**/mocks",
+  ],
+}

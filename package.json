@@ -1,0 +1,25 @@
+{
+  "name": "@zthxxx/tsconfig",
+  "version": "1.0.0",
+  "description": "Zthxxx's base tsconfig, Designed to be inherit by package",
+  "keywords": [
+    "typescript",
+    "tsconfig"
+  ],
+  "author": "zthxxx",
+  "license": "MIT",
+  "repository": "zthxxx/tsconfig",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "README.md",
+    "tsconfig",
+    "build.esm.json",
+    "build.cjs.json",
+    "build.types.json"
+  ]
+}

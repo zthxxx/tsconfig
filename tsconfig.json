@@ -1,0 +1,89 @@
+/**
+ * `files` / `include` / `exclude` / `paths` fields will be overwrite when inheritance;
+ * `references` will not inheritance;
+ *
+ * NOTE:
+ *  `rootDir` / `baseUrl` / `outDir` will be resolved relative to the configuration file they originated in,
+ *    rather than only treat as string, so don't set those in base config.
+ *
+ *  `outDir` will useful to IDE "click to jump source code", click on `outDir/<path>` will jump to `rootDir/<path>`
+ */
+ {
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "noEmit": true,
+    "noEmitOnError": false,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext",
+    ],
+    // https://www.typescriptlang.org/tsconfig/#pretty
+    "pretty": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    // https://www.typescriptlang.org/tsconfig#strict
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    // use for IDE and tool like jest, not for build output sourcemap files
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    /**
+     * https://www.typescriptlang.org/tsconfig#composite
+     *
+     * Notice that I don't use `composite:true` for monorepo, even use `references` with each other,
+     * More details see README in `@zthxxx/tsconfig`
+     */
+    "composite": false,
+    /**
+     * https://www.typescriptlang.org/tsconfig#incremental
+     * also depends on composite
+     *
+     * default `incremental`: true if `composite`, false otherwise.
+     */
+    "incremental": false,
+    // https://www.typescriptlang.org/tsconfig#preserveWatchOutput
+    "preserveWatchOutput": true,
+    // https://www.typescriptlang.org/tsconfig#esModuleInterop
+    "esModuleInterop": true,
+    // https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports
+    "allowSyntheticDefaultImports": true,
+    // https://www.typescriptlang.org/tsconfig#isolatedModules
+    "isolatedModules": true,
+    /**
+     * https://www.typescriptlang.org/tsconfig#useDefineForClassFields
+     * https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#the-usedefineforclassfields-flag-and-the-declare-property-modifier
+     */
+    "useDefineForClassFields": true,
+    // https://www.typescriptlang.org/tsconfig#downlevelIteration
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    // https://www.typescriptlang.org/tsconfig/#preserveSymlinks
+    "preserveSymlinks": false,
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "es",
+    "lib",
+  ],
+  /**
+   * these options are only used by ts-node to execute ts file as script
+   * https://github.com/TypeStrong/ts-node
+   */
+  "ts-node": {
+    // It is faster to skip typechecking.
+    // Remove if you want ts-node to do typechecking.
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "commonjs",
+    },
+  },
+}

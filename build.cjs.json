@@ -1,0 +1,21 @@
+/**
+ * NOTE: this file is symlink to '@zthxxx/tsconfig/build.cjs.json'
+ */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "target": "ES2021",
+    "module": "CommonJS",
+    "noEmit": false,
+    "sourceMap": true,
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "**/*.mock.ts",
+    "**/tests",
+    "**/mocks",
+  ],
+}

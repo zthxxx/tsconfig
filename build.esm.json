@@ -1,0 +1,21 @@
+/**
+ * NOTE: this file is symlink to '@zthxxx/tsconfig/build.esm.json'
+ */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "target": "ES2021",
+    "module": "ESNext",
+    "noEmit": false,
+    "sourceMap": true,
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "**/*.mock.ts",
+    "**/tests",
+    "**/mocks",
+  ],
+}
