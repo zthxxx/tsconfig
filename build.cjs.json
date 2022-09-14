@@ -1,5 +1,5 @@
 /**
- * NOTE: this file is symlink to '@zthxxx/tsconfig/build.cjs.json'
+ * NOTE: this file is symlink/copied to '@zthxxx/tsconfig/build.cjs.json'
  */
 {
   "extends": "./tsconfig.json",

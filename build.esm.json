@@ -1,10 +1,10 @@
 /**
- * NOTE: this file is symlink to '@zthxxx/tsconfig/build.esm.json'
+ * NOTE: this file is symlink/copied to '@zthxxx/tsconfig/build.esm.json'
  */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "es",
     "target": "ES2021",
     "module": "ESNext",
     "noEmit": false,
