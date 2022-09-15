@@ -1,6 +1,6 @@
 {
   "name": "@zthxxx/tsconfig",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zthxxx's base tsconfig, Designed to be inherit by package",
   "keywords": [
     "typescript",
@@ -17,7 +17,7 @@
   "sideEffects": false,
   "files": [
     "README.md",
-    "tsconfig",
+    "tsconfig.json",
     "build.esm.json",
     "build.cjs.json",
     "build.types.json"
