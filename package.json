@@ -1,6 +1,6 @@
 {
   "name": "@zthxxx/tsconfig",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zthxxx's base tsconfig, Designed to be inherit by package",
   "keywords": [
     "typescript",

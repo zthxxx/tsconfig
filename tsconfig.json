@@ -1,4 +1,6 @@
 /**
+ * https://www.typescriptlang.org/tsconfig
+ *
  * `files` / `include` / `exclude` / `paths` fields will be overwrite when inheritance;
  * `references` will not inheritance;
  *
@@ -16,7 +18,14 @@
     "noEmitOnError": false,
     "declaration": true,
     "declarationMap": true,
-    "moduleResolution": "node",
+
+    // https://www.typescriptlang.org/tsconfig#moduleResolution
+    // https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext-1
+    // NodeNext to support ESModule `exports` `imports`
+    "moduleResolution": "NodeNext",
+    // https://www.typescriptlang.org/tsconfig#resolvePackageJsonExports
+    "resolvePackageJsonExports": true,
+
     "lib": [
       "DOM",
       "DOM.Iterable",
