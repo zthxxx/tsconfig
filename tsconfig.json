@@ -19,12 +19,20 @@
     "declaration": true,
     "declarationMap": true,
 
-    // https://www.typescriptlang.org/tsconfig#moduleResolution
-    // https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext-1
-    // NodeNext to support ESModule `exports` `imports`
-    "moduleResolution": "NodeNext",
-    // https://www.typescriptlang.org/tsconfig#resolvePackageJsonExports
-    "resolvePackageJsonExports": true,
+    /**
+     * `Bundler` for supporting all the behaviors traditionally associated with Node.js’s CommonJS require resolution algorithm
+     *    like `node_modules lookups`, `directory modules`, and `extensionless paths`,
+     *    while also supporting newer Node.js resolution features like package.json "exports" and package.json "imports".
+     *
+     * - https://www.typescriptlang.org/docs/handbook/modules/reference.html#bundler
+     * - [package.json "exports"](https://www.typescriptlang.org/docs/handbook/modules/reference.html#packagejson-exports)
+     * - [package.json "imports" and self-name imports](https://www.typescriptlang.org/docs/handbook/modules/reference.html#packagejson-imports-and-self-name-imports)
+     * - [The `moduleResolution` compiler option](https://www.typescriptlang.org/docs/handbook/modules/reference.html#the-moduleresolution-compiler-option)
+     *
+     * > the `resolvePackageJsonExports` and `resolvePackageJsonImports` is default `true`
+    *  >   when moduleResolution is `node16`, `nodenext`, or `bundler`;
+     */
+    "moduleResolution": "Bundler",
 
     "lib": [
       "DOM",
