@@ -4,7 +4,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "es",
+    "outDir": "dist/esm",
     "emitDeclarationOnly": true,
     "noEmit": false,
     "sourceMap": true,

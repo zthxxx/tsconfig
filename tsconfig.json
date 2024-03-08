@@ -101,6 +101,7 @@
     "transpileOnly": true,
     "compilerOptions": {
       "module": "commonjs",
+      "moduleResolution": "Node",
     },
   },
 }

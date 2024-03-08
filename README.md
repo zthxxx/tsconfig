@@ -29,9 +29,9 @@ Example in package root `tsconfig.json`:
   "extends": "@zthxxx/tsconfig/tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "es",
     "baseUrl": ".",
-    
+    "outDir": "dist/esm",
+
     // some external types
     "types": [
       "node",
@@ -53,8 +53,8 @@ Example in package root `tsconfig.json`:
 
 Notice that I don't use `composite:true` for monorepo, even if use `references` with each other,
 
-since `composite` will make `tsc` compile all of `references packages` at once 
-and depend on their source code, 
+since `composite` will make `tsc` compile all of `references packages` at once
+and depend on their source code,
 
 but in monorepo usually it's wrong,
 
@@ -74,7 +74,7 @@ DON'T worry, it makes no influence to `tsc` or any other compiler or bundler.
 
 like via Ctrl/Command + Click, will jump to source code file with correct line.
 
-That also needs set `outDir` path point to `types` field paths in `package.json`.
+That also needs to set `outDir` path point to `types` field paths in `package.json`.
 
 Otherwise without `references`,
 the `Go to Source Definition` only jump to `node_modules/`

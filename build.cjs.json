@@ -4,9 +4,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "dist/cjs",
     "target": "ES2021",
     "module": "CommonJS",
+    "moduleResolution": "Node",
     "noEmit": false,
     "sourceMap": true,
   },
