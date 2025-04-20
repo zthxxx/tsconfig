@@ -16,8 +16,9 @@
     "module": "ESNext",
     "noEmit": true,
     "noEmitOnError": false,
+    "emitDeclarationOnly": true,
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
 
     /**
      * `Bundler` for supporting all the behaviors traditionally associated with Node.js’s CommonJS require resolution algorithm
@@ -41,17 +42,17 @@
     ],
     // https://www.typescriptlang.org/tsconfig/#pretty
     "pretty": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     // https://www.typescriptlang.org/tsconfig#strict
     "strict": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
-    // use for IDE and tool like jest, not for build output sourcemap files
+    // use for IDE and tool like vitest, not for build output sourcemap files
     "sourceMap": true,
     "jsx": "react-jsx",
-    "allowJs": true,
+    "allowJs": false,
     /**
      * https://www.typescriptlang.org/tsconfig#composite
      *
@@ -84,6 +85,17 @@
     "forceConsistentCasingInFileNames": true,
     // https://www.typescriptlang.org/tsconfig/#preserveSymlinks
     "preserveSymlinks": false,
+
+    // https://github.com/microsoft/TypeScript/issues/35601
+    "noErrorTruncation": true,
+
+    // https://www.typescriptlang.org/tsconfig/#noImplicitOverride
+    "noImplicitOverride": true,
+
+    // https://www.typescriptlang.org/tsconfig#disableReferencedProjectLoad
+    // Disable the automatic loading of all projects. Instead,
+    //   projects are loaded dynamically as you open files through your editor.
+    "disableReferencedProjectLoad": false,
   },
   "exclude": [
     "node_modules",
@@ -91,6 +103,7 @@
     "es",
     "lib",
   ],
+
   /**
    * these options are only used by ts-node to execute ts file as script
    * https://github.com/TypeStrong/ts-node
